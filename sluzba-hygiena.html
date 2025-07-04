@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Čistící a hygienické prostředky | BPSA s.r.o.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BPSA</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <a href="index.html#o-nas">O nás</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="nahradni-plneni.html">Náhradní plnění</a>
+      <a href="index.html#klienti">Naši klienti</a>
+      <a href="volne-pozice.html">Volné pozice</a>
+      <a href="kontakt.html">Kontakty</a>
+      <a class="phone" href="tel:+420734300442">+420 734 300 442</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('responsive');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <main class="service-detail">
+    <h1>Čistící a hygienické prostředky</h1>
+
+    <section class="service-block">
+      <p>Díky spolupráci s výrobci a velkododavateli čistících a hygienických prostředků jsme připraveni vám v rámci úklidových služeb zajistit i dodávku těchto prostředků za velice příznivé ceny včetně dopravy zdarma až na váš objekt.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 BPSA s.r.o. | Všechna práva vyhrazena
+  </footer>
+</body>
+</html>

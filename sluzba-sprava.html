@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Správa a údržba nemovitostí | BPSA s.r.o.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BPSA</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <a href="index.html#o-nas">O nás</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="nahradni-plneni.html">Náhradní plnění</a>
+      <a href="index.html#klienti">Naši klienti</a>
+      <a href="volne-pozice.html">Volné pozice</a>
+      <a href="kontakt.html">Kontakty</a>
+      <a class="phone" href="tel:+420734300442">+420 734 300 442</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('responsive');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <main class="service-detail">
+    <h1>Správa a údržba nemovitostí</h1>
+
+    <section class="service-block">
+      <p>Správa a údržba nemovitostí zahrnuje širokou škálu služeb, které zajišťují, že vaše nemovitost zůstane v optimálním stavu a funguje bezproblémově. Naše společnost poskytuje kompletní služby správy a údržby, aby se váš majetek nezměnil v "zátěž", ale sloužil svému účelu efektivně a bezpečně.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Opravy a údržba</h2>
+      <p>Zajišťujeme komplexní opravy a údržbu všech druhů nemovitostí, včetně administrativních budov, bytových komplexů, výrobních hal nebo skladů. Naše týmy odborníků provádějí běžně opravy a údržbu, včetně drobných oprav, úpravy interiéru, nátěrů, údržby elektrotechnických zařízení, a také specializované práce.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Údržba venkovních prostor</h2>
+      <p>Naše služby zahrnují také údržbu venkovních prostor, jako jsou parkoviště, chodníky, zahrady a další. Provádíme úpravu zeleně, odklízení sněhu, čištění cest a úklid venkovních ploch, čímž udržujeme prostředí bezpečné a esteticky přitažlivé.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Facility Management</h2>
+      <p>Pro klienty nabízíme služby facility managementu, které zahrnují kompletní správu budov a zařízení. Od správy pronájmů, přes zajištění bezpečnosti, až po celkovou údržbu, postaráme se o všechny aspekty vašeho majetku, abyste se mohli soustředit na váš hlavní podnikatelský cíl.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Poradenství a revize</h2>
+      <p>Kromě fyzické údržby poskytujeme také odborné poradenství a provádíme revize zařízení, abychom zajistili, že vaše nemovitost splňuje všechny požadavky a standardy. Nabízíme také komplexní inspekce, které pomohou identifikovat potenciální rizika a navrhnout preventivní opatření.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 BPSA s.r.o. | Všechna práva vyhrazena
+  </footer>
+</body>
+</html>

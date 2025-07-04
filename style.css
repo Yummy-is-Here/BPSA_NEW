@@ -1,0 +1,653 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  background-color: #ffffff; /* původně #000 */
+  scroll-behavior: smooth;
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.logo::after {
+  content: " s.r.o.";
+  font-size: 0.8rem;
+  text-transform: none;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+nav .phone {
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  z-index: 11;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  nav.responsive {
+    display: flex;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    flex: 1 1 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  nav .phone {
+    margin-left: 0;
+    font-size: 1.1rem;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #dddddd;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.cta {
+  background-color: #2196f3;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #1976d2;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.6);
+}
+
+.about {
+  background-color: #f4f4f4;
+  color: #111;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.benefits {
+  background-color: #f4f4f4;
+  color: #111;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.benefits-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefits h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.benefit-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.benefit-cards .card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1 1 220px;
+  max-width: 300px;
+  transition: transform 0.3s;
+}
+
+.benefit-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-cards h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.benefit-cards p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.clients {
+  background-color: #ffffff;
+  color: #111;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.clients-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.clients h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.clients p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.client-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.client-logos img {
+  max-height: 60px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.client-logos img:hover {
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #0f1117;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* === SLUŽBY === */
+.services {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+.services h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.services-lead {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 3rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.service-card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2196f3;
+  border: 1px solid #2196f3;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.service-card a:hover {
+  background-color: #2196f3;
+  color: white;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/*SLUŽBY*/
+
+/* === NÁHRADNÍ PLNĚNÍ === */
+.replacement {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #222;
+  background-color: #fefefe;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.replacement h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #111;
+}
+
+.replacement-section {
+  margin-bottom: 3rem;
+}
+
+.replacement-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a237e;
+}
+
+.replacement-section p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+/* === KONTAKTY === */
+.contacts {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #111;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contacts h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.contact-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a237e;
+}
+
+.contact-card .role {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.contact-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.contact-card a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* === PODSTRÁNKA SLUŽBY === */
+.service-detail {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #111;
+}
+
+.service-detail h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.service-block {
+  margin-bottom: 2.5rem;
+}
+
+.service-block h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 0.75rem;
+}
+
+.service-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #333;
+}
+
+
+/* === VOLNÉ POZICE === */
+.job-listing {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #111;
+}
+
+.job-listing h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.jobs-lead {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.positions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.position-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.position-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.position-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.position-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.position-body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.position-body .lokalita {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.position-body .pozice-popis {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.position-body .btn {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2196f3;
+  border: 1px solid #2196f3;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.position-body .btn:hover {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+/* === DETAIL POZICE === */
+.job-detail {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #111;
+}
+
+.job-detail h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.job-img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.lokalita {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.job-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.job-detail .btn {
+  display: inline-block;
+  background-color: #2196f3;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.job-detail .btn:hover {
+  background-color: #1976d2;
+}
+
+.error {
+  color: #c62828;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3rem;
+}

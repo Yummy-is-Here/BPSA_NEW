@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teambuilding a střelecká akademie | BPSA s.r.o.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BPSA</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <a href="index.html#o-nas">O nás</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="nahradni-plneni.html">Náhradní plnění</a>
+      <a href="index.html#klienti">Naši klienti</a>
+      <a href="volne-pozice.html">Volné pozice</a>
+      <a href="kontakt.html">Kontakty</a>
+      <a class="phone" href="tel:+420734300442">+420 734 300 442</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('responsive');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <main class="service-detail">
+    <h1>Teambuilding a střelecká akademie</h1>
+
+    <section class="service-block">
+      <h2>Teambuilding a teamsprit</h2>
+      <p>Potřebujete vybudovat soudržný kolektiv nebo uspořádat zábavný program pro své zaměstnance? Vše zařídíme, provádíme jak outdoorové, tak indoorové aktivity a každý si přijde na své.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Střelecká akademie</h2>
+      <p>Díky našim zaměstnancům, kteří byli členy ozbrojených sborů a disponují zbrojním průkazem pro různé typy zbraní, jsme schopni zajistit střelby na libovolných střelnicích. Součástí střelecké akademie je rovněž příprava a výcvik pro získání zbrojního průkazu.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 BPSA s.r.o. | Všechna práva vyhrazena
+  </footer>
+</body>
+</html>

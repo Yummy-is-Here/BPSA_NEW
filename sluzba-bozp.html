@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOZP a PO | BPSA s.r.o.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BPSA</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <a href="index.html#o-nas">O nás</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="nahradni-plneni.html">Náhradní plnění</a>
+      <a href="index.html#klienti">Naši klienti</a>
+      <a href="volne-pozice.html">Volné pozice</a>
+      <a href="kontakt.html">Kontakty</a>
+      <a class="phone" href="tel:+420734300442">+420 734 300 442</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('responsive');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <main class="service-detail">
+    <h1>BOZP a PO</h1>
+
+    <section class="service-block">
+      <p>Bezpečnost a ochrana zdraví při práci a požární ochrana. S těmito pojmy se většina setkala při vstupním školení, nicméně zaměstnavatelé vědí, že s nimi musí pracovat na pravidelné bázi, sledovat legislativní změny apod. My toto vše zajistíme za vás!</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Vstupní audit</h2>
+      <p>Před zahájením poskytování služeb vždy provádíme zdarma vstupní audit, který spočívá v analýze stávajících procesů a dokumentace a fyzickou prohlídkou provozů klienta. S výsledky klienta následně seznámíme a navrhneme potřebné změny a aktualizace.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Nastavení procesů</h2>
+      <p>Začínáte-li podnikat nebo nejste spokojeni se stávajícím fungováním, po důkladné analýze a v úzké spolupráci s vámi nastavíme veškeré procesy tak, aby se minimalizovala rizika a optimalizovaly náklady na zajištění bezpečnosti a požární ochrany.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Zpracování dokumentace</h2>
+      <p>Ruku v ruce s nastavením procesů jde i zpracování příslušné dokumentace jako kategorizace pracovních pozic, dopravní řád, směrnice pro vydávání osobních ochranných pracovních prostředků, provozní a požární řády a mnohé další a komplikovanější dokumenty.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Školení zaměstnanců</h2>
+      <p>V rámci poskytování služeb BOZP a PO zajišťujeme samozřejmě i školení a to vstupní, periodická, speciální, školení řidičů, managementu, první pomoci a tím zdaleka nekončíme!</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 BPSA s.r.o. | Všechna práva vyhrazena
+  </footer>
+</body>
+</html>

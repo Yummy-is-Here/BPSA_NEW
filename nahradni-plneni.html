@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Náhradní plnění | BPSA s.r.o.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BPSA</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <a href="index.html#o-nas">O nás</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="nahradni-plneni.html">Náhradní plnění</a>
+      <a href="index.html#klienti">Naši klienti</a>
+      <a href="volne-pozice.html">Volné pozice</a>
+      <a href="kontakt.html">Kontakty</a>
+      <a class="phone" href="tel:+420734300442">+420 734 300 442</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('responsive');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <main class="replacement">
+    <h1>Náhradní plnění</h1>
+
+    <section class="replacement-section">
+      <h2>Co je náhradní plnění</h2>
+      <p>Každý zaměstnavatel zaměstnávající vice než 25 zaměstnanců má povinnost zaměstnávat alespoň 4 % zaměstnanců se zdravotním postižením, tj. de facto na každých 25 „Zdravých“ zaměstnanců jednoho zaměstnance se zdravotním postižením. Nezaměstnává-li adekvátní počet, musí odvádět stanovenou platbu do státního rozpočtu (za každého nezaměstnaného 2,5 násobek průměrné mzdy ročně) nebo odebírat výrobky a služby od zaměstnavatelů působících na chráněném trhu práce – dříve také tzv. chráněné dílny.</p>
+      <p>Naše společnost zaměstnává dlouhodobě vice než 50 % zaměstnanců se zdravotním postižením, jsme tedy schopni vám veškeré naše služby poskytnout v režimu náhradního plnění a v důsledku vám ušetřit značné prostředky, které byste jinak museli odvést do státního rozpočtu.</p>
+    </section>
+
+    <section class="replacement-section">
+      <h2>Názorný příklad</h2>
+      <p>Společnost o 200 zaměstnancích by měla zaměstnávat 8 zaměstnanců se zdravotním postižením. Pokud je nezaměstnává, musí odvést za každého 2,5 násobek průměrné mzdy. V roce 2023 činila tato částka 98 265 Kč, za 8 zaměstnanců pak činí celková suma 786 120 Kč. Díky využití našich služb ostrahy v režimu 24/7 má pak tento zaměstnavatel zajištěnou jak kvalitní službu, tak ušetří výše zmíněnou částku na odvodu do státního rozpočtu.</p>
+    </section>
+
+    <section class="replacement-section">
+      <h2>Evidence náhradního plnění</h2>
+      <p>Veškerá evidence dnes probíhá elektronicky na portálu MPSV. My pak veškeré faktury nahráváme do této evidence pod vaším identifikačním číslem, po uhrazení pak pouze potvrdíte odkaz, který vám přijde na e-mail a vše se automaticky spočítá včetně potřebného limitu, který musíte za daný kalendářní rok splnit.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 BPSA s.r.o. | Všechna práva vyhrazena
+  </footer>
+</body>
+</html>

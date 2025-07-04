@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bezpečnostní a recepční služby | BPSA s.r.o.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BPSA</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <a href="index.html#o-nas">O nás</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="nahradni-plneni.html">Náhradní plnění</a>
+      <a href="index.html#klienti">Naši klienti</a>
+      <a href="volne-pozice.html">Volné pozice</a>
+      <a href="kontakt.html">Kontakty</a>
+      <a class="phone" href="tel:+420734300442">+420 734 300 442</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('responsive');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <main class="service-detail">
+    <h1>Bezpečnostní a recepční služby</h1>
+
+    <section class="service-block">
+      <h2>Fyzická ostraha</h2>
+      <p>Obsazení stanoviště pracovníkem ostrahy, který v pravidelných i nepravidelných intervalech vykonává kontrolní pochůzky s cílem předejít protiprávnímu jednání a ochránit majetek a zdraví klienta a osob pohybujících se ve střeženém prostoru.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Recepční služby</h2>
+      <p>Recepční je často první osobou, se kterou se setkají návštěvníci klienta, ať už se jedná o ubytovací zařízení, kancelářskou budovu nebo bytový dům. Na tyto pozice obsazujeme zaměstnance s příjemným vystupováním, dobrými vyjadřovacími schopnostmi a samozřejmě schopné plnit náročné ú koly související s provozem recepce.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Zabezpečovací systémy</h2>
+      <p>Technologie jsou budoucnost a v bezpečnostních službách tomu není jinak. Realizujeme tedy i kompletní zabezpečení objektu technickými prostředky (kamery, čidla, infražáry apod.) od návrhu, po montáž, napojení na dohledové centrum a správu celého systému.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Požární signalizace</h2>
+      <p>Stejně, jako jsme schopni zpracovat projekt zabezpečení objektu, realizujeme od návrhu po montáž a správu systému i požární signalizaci, která dokáže díky čas zjištěnému požáru zabránit rozsáhlým škodám na majetku klienta.</p>
+    </section>
+
+    <section class="service-block">
+      <h2>Pochůzkový systém</h2>
+      <p>K monitoringu pochůzek využíváme systém <strong>Touchguard</strong> od společnosti <strong>TTC TELSYS</strong>, který umožňuje online kontrolu vykonávání pochůzkové činnosti, reporting a také náhled pro klienta a zasílání pravidelných reportů.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 BPSA s.r.o. | Všechna práva vyhrazena
+  </footer>
+</body>
+</html>

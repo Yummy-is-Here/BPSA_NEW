@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPSA s.r.o. | Bezpečnostní řešení</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BPSA</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <a href="#o-nas">O nás</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="nahradni-plneni.html">Náhradní plnění</a>
+      <a href="#klienti">Naši klienti</a>
+      <a href="volne-pozice.html">Volné pozice</a>
+      <a href="kontakt.html">Kontakty</a>
+      <a class="phone" href="tel:+420734300442">+420 734 300 442</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('responsive');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <section class="hero">
+    <video class="video-bg" autoplay muted loop playsinline>
+      <source src="video/security-guard.mp4" type="video/mp4">
+      Váš prohlížeč nepodporuje video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Postaráme se o vás i váš majetek</h1>
+      <p>Zajistíme ostrahu, úklid, recepci i správu</p>
+      <a href="kontakt.html" class="cta">Kontaktujte nás</a>
+    </div>
+  </section>
+
+  <section id="o-nas" class="about">
+    <div class="about-content">
+      <h2>O nás</h2>
+      <p>Společnost <strong>BPSA s.r.o.</strong> je česká bezpečnostní agentura s mnohaletými zkušenostmi v oblasti ochrany osob a majetku. Naším cílem je poskytovat profesionální služby přizpůsobené specifickým potřebám každého klienta – ať už se jedná o fyzickou ostrahu, technické zabezpečení, správu objektů nebo recepční služby.</p>
+      <p>Naši pracovníci jsou pečlivě vybíráni a pravidelně školeni, aby odpovídali vysokým nárokům na spolehlivost, diskrétnost a odbornou způsobilost. Zakládáme si na osobním přístupu, férové komunikaci a kvalitě bez kompromisů.</p>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="benefits-content">
+      <h2>Proč si vybrat právě nás?</h2>
+      <div class="benefit-cards">
+        <div class="card">
+          <h3>24/7 dohled</h3>
+          <p>Nonstop ochrana osob i majetku s rychlou reakcí.</p>
+        </div>
+        <div class="card">
+          <h3>Profesionální tým</h3>
+          <p>Zkušení pracovníci s prověrkou a pravidelným školením.</p>
+        </div>
+        <div class="card">
+          <h3>Individuální přístup</h3>
+          <p>Řešení šitá na míru vašim konkrétním požadavkům.</p>
+        </div>
+        <div class="card">
+          <h3>Komplexní služby</h3>
+          <p>Od fyzické ostrahy přes recepci až po správu objektu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="klienti" class="clients">
+    <div class="clients-content">
+      <h2>Naši klienti</h2>
+      <p>Naše služby využívají významné společnosti napříč různými obory – od průmyslu přes zdravotnictví až po veřejnou správu. Důvěřují nám jak velké firmy, tak menší podniky, kterým zajišťujeme individuální přístup a maximální bezpečnost.</p>
+      <div class="client-logos">
+        <img src="logos/klient1.png" alt="Klient 1">
+        <img src="logos/klient2.png" alt="Klient 2">
+        <img src="logos/klient3.png" alt="Klient 3">
+        <img src="logos/klient4.png" alt="Klient 4">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 BPSA s.r.o. | Všechna práva vyhrazena
+  </footer>
+</body>
+</html>

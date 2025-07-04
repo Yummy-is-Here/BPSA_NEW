@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Správa pozic | BPSA admin</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Inter, sans-serif; background: #f5f5f5; margin: 0; padding: 2rem; }
+    h1 { text-align: center; }
+    .form-section, .positions-section { max-width: 800px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.05); }
+    .form-section input, .form-section textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 6px; }
+    .form-section button { background: #2196f3; color: white; padding: 0.6rem 1.2rem; border: none; border-radius: 6px; cursor: pointer; }
+    .form-section button:hover { background: #1976d2; }
+    .position-row { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; border-bottom: 1px solid #eee; }
+    .position-row p { margin: 0; flex: 1; }
+    .position-row button { margin-left: 1rem; background: #e53935; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; }
+    .position-row button:hover { background: #c62828; }
+  </style>
+</head>
+<body>
+  <h1>Správa pracovních pozic</h1>
+
+  <section class="form-section">
+    <h2>Přidat novou pozici</h2>
+    <form id="addForm">
+      <input type="text" name="nazev" placeholder="Název pozice" required>
+      <input type="text" name="lokalita" placeholder="Lokalita" required>
+      <input type="text" name="obrazek" placeholder="URL obrázku" required>
+      <textarea name="popis" rows="6" placeholder="Popis pozice" required></textarea>
+      <button type="submit">Přidat pozici</button>
+    </form>
+  </section>
+
+  <section class="positions-section">
+    <h2>Existující pozice</h2>
+    <div id="positionList"></div>
+  </section>
+
+  <script>
+    const API_URL = 'api/positions.php';
+
+    function loadPositions() {
+      fetch(API_URL)
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById('positionList');
+          list.innerHTML = '';
+          data.forEach(pos => {
+            const row = document.createElement('div');
+            row.className = 'position-row';
+            row.innerHTML = `<p><strong>${pos.nazev}</strong> – ${pos.lokalita}</p><button onclick="deletePozice(${pos.id})">Smazat</button>`;
+            list.appendChild(row);
+          });
+        });
+    }
+
+    function deletePozice(id) {
+      fetch(API_URL + '?id=' + id, { method: 'DELETE' })
+        .then(() => loadPositions());
+    }
+
+    document.getElementById('addForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      fetch(API_URL, {
+        method: 'POST',
+        body: formData
+      }).then(() => {
+        this.reset();
+        loadPositions();
+      });
+    });
+
+    loadPositions();
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Služby | BPSA s.r.o.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BPSA</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <a href="index.html#o-nas">O nás</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="nahradni-plneni.html">Náhradní plnění</a>
+      <a href="index.html#klienti">Naši klienti</a>
+      <a href="volne-pozice.html">Volné pozice</a>
+      <a href="kontakt.html">Kontakty</a>
+      <a class="phone" href="tel:+420734300442">+420 734 300 442</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('responsive');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <main class="services">
+    <h1>Služby</h1>
+    <p class="services-lead">Přehled služeb, které aktuálně nabízíme. Více informací v jednotlivých sekcích.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="icons/security.svg" alt="Ikona bezpečnost" class="service-icon">
+        <h3>Bezpečnostní a recepční služby</h3>
+        <a href="sluzba-bezpecnost.html">Více informací</a>
+      </div>
+      <div class="service-card">
+        <img src="icons/cleaning.svg" alt="Ikona úklidu" class="service-icon">
+        <h3>Úklidové služby</h3>
+        <a href="sluzba-uklid.html">Více informací</a>
+      </div>
+      <div class="service-card">
+        <img src="icons/document.svg" alt="Ikona BOZP" class="service-icon">
+        <h3>BOZP a PO</h3>
+        <a href="sluzba-bozp.html">Více informací</a>
+      </div>
+      <div class="service-card">
+        <img src="icons/building.svg" alt="Ikona správy" class="service-icon">
+        <h3>Správa a údržba nemovitostí</h3>
+        <a href="sluzba-sprava.html">Více informací</a>
+      </div>
+      <div class="service-card">
+        <img src="icons/team.svg" alt="Ikona teambuildingu" class="service-icon">
+        <h3>Teambuilding a střelecká akademie</h3>
+        <a href="sluzba-teambuilding.html">Více informací</a>
+      </div>
+      <div class="service-card">
+        <img src="icons/cleaner.svg" alt="Ikona hygieny" class="service-icon">
+        <h3>Čistící a hygienické prostředky</h3>
+        <a href="sluzba-hygiena.html">Více informací</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 BPSA s.r.o. | Všechna práva vyhrazena
+  </footer>
+</body>
+</html>
