@@ -28,11 +28,15 @@ header {
 }
 
 .logo {
-  font-size: 1.6rem;
-  font-weight: 800;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
-
+.logo img {
+  height: 40px;
+  width: auto;
+  margin-right: 8px;
+}
+/*
 .logo::after {
   content: " s.r.o.";
   font-size: 0.8rem;
@@ -40,7 +44,7 @@ header {
   font-weight: 400;
   margin-left: 4px;
 }
-
+*/
 nav {
   display: flex;
   align-items: center;
