@@ -1,11 +1,48 @@
-<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakty | BPSA s.r.o.</title>
+  <title>O společnosti | BPSA s.r.o.</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .info-section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background-color: #e3f2fd;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .info-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      row-gap: 0.8rem;
+      column-gap: 1rem;
+    }
+    .info-grid strong {
+      font-weight: 600;
+    }
+    .map-section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+    }
+    .map-section h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1.3rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,67 +53,33 @@
       <a href="sluzby.html">Služby</a>
       <a href="nahradni-plneni.html">Náhradní plnění</a>
       <a href="index.html#klienti">Naši klienti</a>
-      <a href="volne-pozice.html">Volné pozice</a>
-      <a href="kontakt.html">Kontakty</a>
-      <a class="phone" href="tel:+420734300442">+420 734 300 442</a>
+      <a href="https://www.instagram.com/bpsa_s.r.o?igsh=MTZ4ZWcweG5kamVpMw==" target="_blank">Volné pozice</a>
+      <a href="kontakt.html">O společnosti</a>
     </nav>
   </header>
 
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    toggle.addEventListener('click', () => {
-      navMenu.classList.toggle('responsive');
-      toggle.classList.toggle('active');
-    });
-  </script>
+  <main>
+    <section class="info-section">
+      <h2>Základní údaje</h2>
+      <div class="info-grid">
+        <strong>Obchodní firma:</strong><span>BPSA s.r.o.</span>
+        <strong>IČ:</strong><span>27558568</span>
+        <strong>DIČ:</strong><span>CZ27558568</span>
+        <strong>Sídlo:</strong><span>Tovární 1112, Chrudim IV, 537 01 Chrudim</span>
+        <strong>Údaj o zápisu do OR:</strong><span>Krajský soud v Hradci Králové, sp. zn. C 25955</span>
+        <strong>Statutární orgán:</strong><span>Tomáš Czabe, jednatel společnosti</span>
+        <strong>Bankovní spojení:</strong><span>Komerční banka, a.s.</span>
+        <strong>Číslo účtu:</strong><span>43-4212030277/0100</span>
+        <strong>Limit pojistného plnění:</strong><span>100 mil. Kč</span>
+        <strong>Telefon:</strong><span><a href="tel:+420734300442">+420 734 300 442</a></span>
+      </div>
+    </section>
 
-  <main class="contacts">
-    <h1>Kontakty</h1>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>Mgr. Petr Novotný</h3>
-        <p class="role">Výkonný ředitel</p>
-        <p><strong>Tel:</strong> <a href="tel:+420734300111">+420 734 300 111</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:novotny@bpsa.cz">novotny@bpsa.cz</a></p>
-      </div>
-      <div class="contact-card">
-        <h3>Ing. Eva Dvořáková</h3>
-        <p class="role">Oblastní manažerka – Praha a střední Čechy</p>
-        <p><strong>Tel:</strong> <a href="tel:+420734300222">+420 734 300 222</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:dvorakova@bpsa.cz">dvorakova@bpsa.cz</a></p>
-      </div>
-      <div class="contact-card">
-        <h3>Tomáš Černý</h3>
-        <p class="role">Oblastní manažer – Morava</p>
-        <p><strong>Tel:</strong> <a href="tel:+420734300333">+420 734 300 333</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:cerny@bpsa.cz">cerny@bpsa.cz</a></p>
-      </div>
-      <div class="contact-card">
-        <h3>Jana Malá</h3>
-        <p class="role">Administrativa & fakturace</p>
-        <p><strong>Tel:</strong> <a href="tel:+420734300444">+420 734 300 444</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:mala@bpsa.cz">mala@bpsa.cz</a></p>
-      </div>
-          <div class="contact-card">
-        <h3>Lucie Králová</h3>
-        <p class="role">HR specialistka</p>
-        <p><strong>Tel:</strong> <a href="tel:+420734300555">+420 734 300 555</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:kralova@bpsa.cz">kralova@bpsa.cz</a></p>
-      </div>
-      <div class="contact-card">
-        <h3>Radek Svoboda</h3>
-        <p class="role">Bezpečnostní technik</p>
-        <p><strong>Tel:</strong> <a href="tel:+420734300666">+420 734 300 666</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:svoboda@bpsa.cz">svoboda@bpsa.cz</a></p>
-      </div>
-      <div class="contact-card">
-        <h3>Barbora Holá</h3>
-        <p class="role">Asistentka vedení</p>
-        <p><strong>Tel:</strong> <a href="tel:+420734300777">+420 734 300 777</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:holabarbora@bpsa.cz">holabarbora@bpsa.cz</a></p>
-      </div>
-    </div>
+    <section class="map-section">
+      <h3>Hlavní kancelář</h3>
+      <p>Husitská 155/11, Olomouc</p>
+      <iframe src="https://www.google.com/maps?q=Husitsk%C3%A1+155%2F11,+Olomouc&output=embed" allowfullscreen loading="lazy"></iframe>
+    </section>
   </main>
 
   <footer>
